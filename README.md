@@ -10,6 +10,45 @@ VoidVim is made to be easy to understand and easy to extend.
 
 ---
 
+## Installation
+
+### Requirements
+
+Before installing VoidVim, make sure the following tools are available on your system:
+
+* Neovim >= 0.11
+* Git
+* A Nerd Font
+* Ripgrep (`rg`)
+
+---
+
+### Backup Existing Configuration
+
+```bash
+mv ~/.config/nvim ~/.config/nvim.bak
+```
+
+---
+
+### Clone VoidVim
+
+```bash
+git clone https://github.com/Parviz-sudo/voidvim ~/.config/nvim
+```
+
+---
+
+### Start Neovim
+
+```bash
+nvim
+```
+
+On first launch, Lazy.nvim will automatically install all required plugins.
+
+---
+
 # Keybinds
 
 ## General
