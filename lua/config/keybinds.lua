@@ -1,17 +1,11 @@
 vim.g.mapleader = " "
 
--- Buffers
-vim.keymap.set("n", "<S-l>", ":BufferLineCycleNext<CR>", { desc = "Next Buffer" })
-vim.keymap.set("n", "<S-h>", ":BufferLineCyclePrev<CR>", { desc = "Previous Buffer" })
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- Clear search highlight
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear Search Highlight" })
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
+vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
 
--- Save
-vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save File" })
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
--- Quit
-vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit Window" })
-
--- Quit All
-vim.keymap.set("n", "<leader>Q", "<cmd>qa<CR>", { desc = "Quit Neovim" })
+vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>")
+vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>")
