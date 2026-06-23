@@ -49,91 +49,89 @@ On first launch, Lazy.nvim will automatically install all required plugins.
 
 ---
 
-# Keybinds
+# Keybindings
+
+Leader key: `Space`
+
+---
 
 ## General
 
-| Mode | Key         | Action                 |
-| ---- | ----------- | ---------------------- |
-| `n`  | `<leader>e` | Toggle Neo-tree        |
-| `n`  | `<leader>w` | Save current file      |
-| `n`  | `<leader>q` | Quit current window    |
-| `n`  | `<leader>Q` | Quit Neovim            |
-| `n`  | `<Esc>`     | Clear search highlight |
-| `n`  | `<S-l>`     | Next buffer            |
-| `n`  | `<S-h>`     | Previous buffer        |
+| Key         | Action                     |
+| ----------- | -------------------------- |
+| `<leader>w` | Save current file          |
+| `<leader>q` | Quit current window        |
+| `<leader>e` | Open file explorer (`:Ex`) |
+| `<Esc>`     | Clear search highlights    |
+| `<S-l>`     | Next buffer                |
+| `<S-h>`     | Previous buffer            |
 
 ---
 
 ## Telescope
 
-| Mode | Key          | Action            |
-| ---- | ------------ | ----------------- |
-| `n`  | `<leader>ff` | Find files        |
-| `n`  | `<leader>fg` | Live grep         |
-| `n`  | `<leader>fb` | List open buffers |
-| `n`  | `<leader>fh` | Open help tags    |
-
----
-
-## Harpoon
-
-| Mode | Key          | Action                |
-| ---- | ------------ | --------------------- |
-| `n`  | `<leader>a`  | Add current file      |
-| `n`  | `<leader>fm` | Open Harpoon menu     |
-| `n`  | `<C-p>`      | Previous Harpoon file |
-| `n`  | `<C-n>`      | Next Harpoon file     |
+| Key          | Action            |
+| ------------ | ----------------- |
+| `<leader>ff` | Find files        |
+| `<leader>fg` | Live grep         |
+| `<leader>fb` | List open buffers |
+| `<leader>fh` | Search help tags  |
 
 ---
 
 ## LSP
 
-| Mode | Key          | Action              |
-| ---- | ------------ | ------------------- |
-| `n`  | `gd`         | Go to definition    |
-| `n`  | `K`          | Hover documentation |
-| `n`  | `<leader>rn` | Rename symbol       |
-| `n`  | `<leader>ca` | Code actions        |
+| Key          | Action              |
+| ------------ | ------------------- |
+| `gd`         | Go to definition    |
+| `K`          | Hover documentation |
+| `<leader>ca` | Code actions        |
+| `<leader>rn` | Rename symbol       |
 
 ---
 
 ## Formatting
 
-| Mode | Key          | Action              |
-| ---- | ------------ | ------------------- |
-| `n`  | `<leader>lf` | Format current file |
+| Key          | Action              |
+| ------------ | ------------------- |
+| `<leader>lf` | Format current file |
 
 ---
 
-## Completion
+## Completion (CMP)
 
-| Mode | Key         | Action                                  |
-| ---- | ----------- | --------------------------------------- |
-| `i`  | `<C-Space>` | Trigger completion                      |
-| `i`  | `<CR>`      | Confirm selection                       |
-| `i`  | `<Tab>`     | Next completion item / snippet jump     |
-| `i`  | `<S-Tab>`   | Previous completion item / snippet jump |
+| Key         | Action                                          |
+| ----------- | ----------------------------------------------- |
+| `<C-Space>` | Trigger completion menu                         |
+| `<CR>`      | Confirm completion                              |
+| `<Tab>`     | Next completion item / expand snippet           |
+| `<S-Tab>`   | Previous completion item / jump back in snippet |
+
+---
+
+## Git
+
+### Fugitive
+
+| Command | Action                          |
+| ------- | ------------------------------- |
+| `:Git`  | Open Fugitive Git status window |
+
+### Gitsigns
+
+Git signs are displayed automatically in the sign column.
+
+---
+
+## Dashboard
+
+The dashboard is shown automatically on startup and provides quick access to common actions.
 
 ---
 
 ## Which-Key
 
-Press:
-
-| Mode | Key        | Action                     |
-| ---- | ---------- | -------------------------- |
-| `n`  | `<leader>` | Show available keybindings |
-
----
-
-## Bufferline
-
-| Mode | Key     | Action          |
-| ---- | ------- | --------------- |
-| `n`  | `<S-l>` | Next buffer     |
-| `n`  | `<S-h>` | Previous buffer |
-
+Press `<leader>` and wait to see all available keybindings grouped by category.
 
 ---
 
