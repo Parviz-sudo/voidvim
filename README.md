@@ -2,7 +2,7 @@
 
 > A complete, batteries-included Neovim configuration — minimal to start, but ready for serious daily-driver use.
 
-# Philosophy of VoidVim
+# Philosophy of Voidvim
 
 The philosophy of VoidVim is to stay easy to understand and easy to extend while still covering everything a modern editor is expected to do: real syntax understanding, a fast fuzzy finder, full LSP tooling, formatting, linting, git integration, and debugging — without making assumptions about which language you use.
 
