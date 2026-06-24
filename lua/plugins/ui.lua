@@ -22,6 +22,18 @@ return {
 				long_message_to_split = true,
 				lsp_doc_border = true,
 			},
+			views = {
+				cmdline_popup = {
+					position = {
+						row = "20%", -- lower number = closer to the top of the screen
+						col = "50%",
+					},
+					size = {
+						width = 60,
+						height = "auto",
+					},
+				},
+			},
 		},
 	},
 
