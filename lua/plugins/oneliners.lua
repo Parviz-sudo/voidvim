@@ -1,17 +1,17 @@
 return {
-	{ -- This helps with shh tunneling and copying my clipboard
-		'ojroques/vim-oscyank',
+	{ -- Copy to the system clipboard over SSH via OSC52
+		"ojroques/vim-oscyank",
+		branch = "main",
 	},
-	{ -- Git plugin
-		'tpope/vim-fugitive',
+	{ -- Git commands inside Neovim
+		"tpope/vim-fugitive",
+		cmd = { "Git", "Gdiffsplit", "Gclog", "Gread", "Gwrite", "Gblame" },
 	},
-	{ -- Show CSS Colors
-		'brenoprata10/nvim-highlight-colors',
+	{ -- Show CSS / hex colors inline
+		"brenoprata10/nvim-highlight-colors",
+		event = { "BufReadPost", "BufNewFile" },
 		config = function()
-			require('nvim-highlight-colors').setup({})
-		end
-	},
-	{
-		"onsails/lspkind.nvim",
+			require("nvim-highlight-colors").setup({})
+		end,
 	},
 }

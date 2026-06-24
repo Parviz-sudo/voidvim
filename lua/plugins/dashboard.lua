@@ -1,7 +1,6 @@
 return {
 	{
 		"nvimdev/dashboard-nvim",
-
 		event = "VimEnter",
 
 		dependencies = {
@@ -31,24 +30,38 @@ return {
 
 					center = {
 						{
-							icon = "  ",
+							icon = "  ",
 							desc = "Find Files",
 							key = "f",
 							action = "Telescope find_files",
 						},
 
 						{
-							icon = "  ",
+							icon = "  ",
 							desc = "Recent Files",
 							key = "r",
 							action = "Telescope oldfiles",
 						},
 
 						{
-							icon = "  ",
+							icon = "  ",
 							desc = "New File",
 							key = "n",
 							action = "ene | startinsert",
+						},
+
+						{
+							icon = "  ",
+							desc = "Restore Session",
+							key = "s",
+							action = "lua require('persistence').load()",
+						},
+
+						{
+							icon = "  ",
+							desc = "Find Text",
+							key = "g",
+							action = "Telescope live_grep",
 						},
 
 						{
@@ -59,14 +72,14 @@ return {
 						},
 
 						{
-							icon = "  ",
+							icon = "  ",
 							desc = "Config",
 							key = "c",
 							action = "edit ~/.config/nvim/init.lua",
 						},
 
 						{
-							icon = "  ",
+							icon = "  ",
 							desc = "Quit",
 							key = "q",
 							action = "qa",

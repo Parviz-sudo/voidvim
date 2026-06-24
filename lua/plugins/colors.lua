@@ -1,21 +1,46 @@
 local function enable_transparency()
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-end
-return {
-    {
-	"folke/tokyonight.nvim",
-	config = function()
-	    vim.cmd.colorscheme "tokyonight"
-	    enable_transparency()
-	end
-    },
-    {
-	"nvim-lualine/lualine.nvim",
-	dependencies = {
-	    "nvim-tree/nvim-web-devicons",
-	},
-	opts = {
-	    theme = 'tokyonight',
+	local groups = {
+		"Normal",
+		"NormalNC",
+		"NormalFloat",
+		"FloatBorder",
+		"SignColumn",
+		"MsgArea",
+		"EndOfBuffer",
 	}
-    },
+	for _, group in ipairs(groups) do
+		vim.api.nvim_set_hl(0, group, { bg = "none" })
+	end
+end
+
+return {
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+
+		opts = {
+			style = "storm",
+			transparent = true,
+		},
+
+		config = function(_, opts)
+			require("tokyonight").setup(opts)
+			vim.cmd.colorscheme("tokyonight")
+			enable_transparency()
+		end,
+	},
+
+	{
+		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
+
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+
+		opts = {
+			theme = "tokyonight",
+		},
+	},
 }
